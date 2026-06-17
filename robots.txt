@@ -1,0 +1,7 @@
+# prevent Wayback Machine/Internet Archive indexing
+User-agent: ia_archiver
+Disallow: /
+
+# no restrictions for other crawlers
+User-agent: *
+Allow: /
