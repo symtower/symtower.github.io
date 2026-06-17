@@ -1,0 +1,147 @@
+/*** css variables (THEMES) ***/
+:root {
+    --accent-color: #9b5cff; /* purple */
+    --bg-color: #0d0d0f;
+    --border-color: #2a2a2e;
+    --text-color: #e0e0e0;
+}
+
+body.focus-mode {
+    /* focus mode (darker + green accent) */
+    --accent-color: #00ff7f; /* green */
+    --bg-color: #050507;
+    --border-color: #1a1a1d;
+    --text-color: #d0ffd0;
+}
+
+::selection {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/*** global styles ***/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--accent-color);
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Courier New", monospace;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*** header and navigation ***/
+.site-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 1rem;
+}
+
+.logo {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0.4rem 0.6rem;
+}
+
+.theme-toggle:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/*** main sections ***/
+main {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 2rem 1rem;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.lab-name {
+    color: var(--accent-color);
+    font-size: 3rem;
+}
+
+.subtitle {
+    opacity: 0.8;
+}
+
+.project-list,
+.contact-list {
+    list-style: square;
+    padding-left: 1.2rem;
+}
+
+.contact-item a {
+    color: color-mix(in srgb, var(--accent-color) 70%, transparent);
+}
+
+/*** footer ***/
+.site-footer {
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    padding: 1rem;
+    text-align: center;
+}
+
+/*** responsive design ***/
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .team-name {
+        font-size: 2.2rem;
+    }
+}
